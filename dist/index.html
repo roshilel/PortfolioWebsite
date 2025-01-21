@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aron Maung</title>
+
+</head>
+<body>
+    <canvas id="bg"></canvas>
+
+    <div id="box1">
+      <svg width = "500" height="500" viewBox="0 0 500 500">
+
+          <path id="curve" d="M 30 250 A 220 220 0 1 1 30 253" fill="transparent">
+          </path>
+
+          <text class="text">
+              <textPath class="text__path" href="#curve">
+                  Hi, I'm Aron
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  Welcome to my website!
+              </textPath> 
+          </text>
+      </svg>
+    </div>
+
+    <main>
+        
+        <div id="box2">
+          <h1>About Me</h1>
+          <p> 
+            Hi! I'm Aron, a second-year student at UCLA studying computational math.
+            <br>
+            <br>
+            My interests include 3D graphics and game design. Right now, I am focusing on learning Unity to make games.
+            I have also been dabbling in Javascript, specifically ThreeJS to make 3D web graphics.
+            <br>
+            <br>
+            Outside of programming, I enjoy rock climbing and playing the ukulele.
+          </p>
+        </div>
+      
+
+        <div id="my_work">
+          <h1>My Work</h1>
+        </div>
+
+        <div id="box4">
+          <img src="images/antqueen.png" height="350px">
+        </div>
+        <div id="box5">
+          <h3> "Ant Queen" (Ludum Dare 56 Game Jam)</h3>
+        </div>
+
+        <div id="box6">
+          <img src="images/tourdeaxolotl.PNG" height="350px">
+        </div>
+        <div id="box7">
+          <h3> "Tour De Axolotl" (ACM Studio Game Jam)</h3>
+        </div>
+
+        <div id="box8">
+          <img src="images/slaythesnowball.png" height="350px">
+        </div>
+        <div id="snowball_text">
+          <h3> "Slay The Snowball" (ACM Studio Game Jam)</h3>
+        </div>
+
+        <div id="gd_port">
+          <img src="images/gdportwix.png" height="350px">
+        </div>
+        <div id="gd_port_text">
+          <h3> "Slay The Snowball" (ACM Studio Game Jam)</h3>
+        </div>
+
+        <div id="about_website">
+          <h1>About This Website</h1>
+          <p> I made this website in VS Code using HTML, and CSS. I used Javascript, specifically the ThreeJS library for the 3D graphics and animations. </p>
+        </div>
+
+
+        <div id="thanks">
+          <h1> Thanks for visiting! </h1>
+        </div>
+          
+    
+        
+    </main>
+
+    <script type="module" src="/main.js"></script>
+
+
+    <!--
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+    </script>
+    <script>
+
+      $(window).scroll(function() {
+        $(".text__path").css("opacity", 1 - $(window).scrollTop() / 250);
+      });
+
+    </script>
+    -->
+
+</body>
+</html>
