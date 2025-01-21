@@ -1,4 +1,4 @@
-import './style.css';
+
 import * as THREE from 'https://unpkg.com/three/build/three.module.js';
 
 import { GLTFLoader } from 'https://unpkg.com/three@0.172.0/examples/jsm/loaders/GLTFLoader.js';
