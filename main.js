@@ -66,8 +66,8 @@ const loader = new GLTFLoader();
 loader.load( 'models/Astronaut.glb', ( gltf ) => {
     loadedModel = gltf;
     gltf.scene.rotation.y = 4;
-    gltf.scene.position.z = 14.75;
-    gltf.scene.position.x = -16;
+    gltf.scene.position.z = 16;
+    gltf.scene.position.x = -17;
 
 	scene.add( gltf.scene );
 
@@ -103,7 +103,7 @@ loader.load( 'models/Laptop.glb', ( gltf ) => {
 
 //// MOON /////////////////////////////////////////////////////////////////
 
-const moonTexture = new THREE.TextureLoader().load('textures/earth2.jpg');
+const moonTexture = new THREE.TextureLoader().load('textures/moon.jpg');
 
 const moon = new THREE.Mesh(new THREE.SphereGeometry(10, 40, 40), new THREE.MeshStandardMaterial({ map: moonTexture }));
 
@@ -121,6 +121,7 @@ function moveCamera() {
 
   camera.position.z = t * -0.01;
   camera.position.x = t * 0.01;
+  laptopModel.scene.rotation.y += t * -0.00001;
 }
 
 document.body.onscroll = moveCamera
@@ -140,14 +141,17 @@ function animate() {
     }
 
     if (laptopModel) {
-      laptopModel.scene.rotation.y += -0.005;
-      laptopModel.scene.rotation.z += -0.005;
-      if (t < -4400 && t > -4900) {
+      if (t < -4500 && t > -5100) {
         laptopModel.scene.position.x = camera.position.x - 3;
         if (laptopModel.scene.position.z < camera.position.z - 10)
-          laptopModel.scene.position.z += 10;
+          if(laptopModel.scene.position.z > camera.position.z - 40)
+            laptopModel.scene.position.z += 3;
+          else if (laptopModel.scene.position.z > camera.position.z - 20)
+            laptopModel.scene.position.z += 1;
+          else
+            laptopModel.scene.position.z += 7;
         else
-          laptopModel.scene.position.z = camera.position.z - 6;
+          laptopModel.scene.position.z = camera.position.z - 5;
       }
       else {
         if (laptopModel.scene.position.z > -500)
@@ -159,6 +163,7 @@ function animate() {
 
     earth.rotation.y += 0.005;
     moon.position.x = camera.position.x;
+    moon.rotation.z += 0.001;
 
     renderer.render(scene, camera);
 }

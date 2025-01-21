@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
 
 canvas {
@@ -9,7 +9,8 @@ canvas {
 
 
 body {
-    font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+    font-family: 'Roboto Condensed', Arial, sans-serif;
+    font-weight: 500;
 }
 
 main{
@@ -19,9 +20,16 @@ main{
     display: grid;
     grid-template-columns: repeat(50, 1fr);
     grid-auto-rows: minmax(100px, auto);
-    
 }
 
+h1{
+    font-weight: 500;
+}
+
+h3{
+    font-weight: 500;
+    font-size: 20px;
+}
 
 .text{
     fill: white;
@@ -31,7 +39,6 @@ main{
 
 .text__path{
     font-size: 40px;
-
 }
 
 @keyframes rotate{
@@ -51,6 +58,15 @@ header {
     margin-bottom: var(--spacing);
   }
 
+p{
+    font-weight: 300;
+    font-size: 15px;
+}
+
+a{
+    color: lightseagreen;
+}
+
 #box1 {
     position: absolute;
     top: 50%;
@@ -59,7 +75,7 @@ header {
 }
 
 #box2 {
-    grid-column: 10 / span 5;
+    grid-column: 10 / span 6;
     grid-row: 20;
 }
 
@@ -74,8 +90,10 @@ header {
 }
 
 #box5 {
-    grid-column: 10 / span 10;
+    grid-column: 10 / span 20;
     grid-row: 29;
+    line-height: 0.7;
+    min-height: 20vh;
 }
 
 #box6 {
@@ -84,8 +102,10 @@ header {
 }
 
 #box7 {
-    grid-column: 13 / span 10;
+    grid-column: 13 / span 20;
     grid-row: 31;
+    line-height: 0.7;
+    min-height: 20vh;
 }
 
 #box8 {
@@ -94,8 +114,10 @@ header {
 }
 
 #snowball_text {
-    grid-column: 16 / span 10;
+    grid-column: 16 / span 20;
     grid-row: 33;
+    line-height: 0.7;
+    min-height: 20vh;
 }
 
 #gd_port {
@@ -104,8 +126,9 @@ header {
 }
 
 #gd_port_text {
-    grid-column: 19 / span 10;
+    grid-column: 19 / span 20;
     grid-row: 35;
+    line-height: 0.7;
 }
 
 
@@ -119,6 +142,12 @@ header {
 #thanks{
     grid-column: 21 / span 10;
     grid-row: 45;
+    text-align: center;
+}
+
+#contacts{
+    grid-column: 16 / span 20;
+    grid-row: 46;
     text-align: center;
     min-height: 60vh;
 }
