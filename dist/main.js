@@ -39,8 +39,19 @@ scene.background = spaceTexture;
 // LIGHTING
 ///////////////////////////////////////////////////////////////////////////
 
-const ambientLight = new THREE.AmbientLight(0xffffff, 1);
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.2);
 scene.add(ambientLight);
+
+const pointLight = new THREE.PointLight(0xffffff, 1200);
+pointLight.position.set(10, 0, 20);
+scene.add(pointLight);
+
+const pointLight2 = new THREE.PointLight(0xffffff, 1300);
+pointLight2.position.set(-40, 5, 40);
+scene.add(pointLight2);
+
+const lightHelper = new THREE.PointLightHelper(pointLight)
+scene.add(lightHelper);
 
 ///////////////////////////////////////////////////////////////////////////
 // OBJECTS
